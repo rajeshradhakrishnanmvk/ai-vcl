@@ -1,0 +1,48 @@
+.vcl-toast-container {
+  position: fixed;
+  bottom: var(--vcl-space-6);
+  right: var(--vcl-space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--vcl-space-2);
+  z-index: 9999;
+  max-width: 400px;
+}
+
+.vcl-toast {
+  display: flex;
+  align-items: center;
+  gap: var(--vcl-space-3);
+  padding: var(--vcl-space-3) var(--vcl-space-4);
+  border-radius: var(--vcl-radius-md);
+  box-shadow: var(--vcl-shadow-md);
+  font-size: var(--vcl-font-size-sm);
+  color: #fff;
+  animation: vcl-toast-in var(--vcl-transition-normal);
+
+  &--success { background: var(--vcl-color-success); }
+  &--error { background: var(--vcl-color-danger); }
+  &--warning { background: var(--vcl-color-warning); }
+  &--info { background: var(--vcl-color-info); }
+
+  &__message { flex: 1; }
+
+  &__close {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 1.25rem;
+    line-height: 1;
+    padding: 0;
+    opacity: 0.8;
+
+    &:hover { opacity: 1; }
+    &:focus-visible { outline: 2px solid currentColor; }
+  }
+}
+
+@keyframes vcl-toast-in {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}

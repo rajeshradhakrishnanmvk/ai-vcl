@@ -1,0 +1,17 @@
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.csproj.AssemblyReference.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.AssemblyInfoInputs.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.AssemblyInfo.cs
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.csproj.CoreCompileInputs.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Application.deps.json
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Application.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Application.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Contracts.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Domain.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Domain.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/bin/Debug/net10.0/ComponentPlatform.Contracts.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/Componen.4DBB28AA.Up2Date
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/refint/ComponentPlatform.Application.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ComponentPlatform.Application.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/obj/Debug/net10.0/ref/ComponentPlatform.Application.dll

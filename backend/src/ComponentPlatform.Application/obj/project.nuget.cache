@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Flam2grJ7Ec=",
+  "success": true,
+  "projectFilePath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Application/ComponentPlatform.Application.csproj",
+  "expectedPackageFiles": [
+    "/home/runner/.nuget/packages/fluentvalidation/12.1.1/fluentvalidation.12.1.1.nupkg.sha512",
+    "/home/runner/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.12/microsoft.extensions.dependencyinjection.abstractions.10.0.12.nupkg.sha512"
+  ],
+  "logs": []
+}

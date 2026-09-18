@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ComponentPlatform.Domain/1.0.0": {
+        "dependencies": {
+          "ComponentPlatform.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "ComponentPlatform.Domain.dll": {}
+        }
+      },
+      "ComponentPlatform.Contracts/1.0.0": {
+        "runtime": {
+          "ComponentPlatform.Contracts.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ComponentPlatform.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ComponentPlatform.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.AssemblyInfoInputs.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.AssemblyInfo.cs
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.csproj.CoreCompileInputs.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/bin/Debug/net10.0/ComponentPlatform.Domain.deps.json
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/bin/Debug/net10.0/ComponentPlatform.Domain.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/bin/Debug/net10.0/ComponentPlatform.Domain.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/bin/Debug/net10.0/ComponentPlatform.Contracts.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/bin/Debug/net10.0/ComponentPlatform.Contracts.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.csproj.AssemblyReference.cache
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/Componen.34AB0571.Up2Date
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/refint/ComponentPlatform.Domain.dll
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ComponentPlatform.Domain.pdb
+/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/Debug/net10.0/ref/ComponentPlatform.Domain.dll

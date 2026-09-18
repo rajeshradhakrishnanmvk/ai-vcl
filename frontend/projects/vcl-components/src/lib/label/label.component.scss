@@ -1,0 +1,15 @@
+.vcl-label {
+  display: inline-block;
+  font-weight: var(--vcl-font-weight-medium);
+  color: var(--vcl-color-text);
+  margin-bottom: var(--vcl-space-1);
+
+  &--sm { font-size: var(--vcl-font-size-xs); }
+  &--base { font-size: var(--vcl-font-size-sm); }
+  &--lg { font-size: var(--vcl-font-size-base); }
+
+  &__required {
+    color: var(--vcl-color-danger);
+    margin-left: 0.125rem;
+  }
+}

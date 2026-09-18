@@ -1,0 +1,26 @@
+@use '../projects/vcl-theming/src/lib/styles/tokens.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: var(--vcl-font-size-base);
+  line-height: var(--vcl-line-height-normal);
+  color: var(--vcl-color-text);
+  background: var(--vcl-color-surface-alt);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: var(--vcl-color-primary);
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--vcl-focus-ring);
+}

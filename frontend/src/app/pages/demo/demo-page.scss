@@ -1,0 +1,35 @@
+.demo-app {
+  min-height: 100vh;
+  background: var(--vcl-color-surface-alt);
+}
+
+.demo-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--vcl-space-4) var(--vcl-space-6);
+  background: var(--vcl-color-surface);
+  border-bottom: 1px solid var(--vcl-color-border);
+  box-shadow: var(--vcl-shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__title {
+    margin: 0;
+    font-size: var(--vcl-font-size-xl);
+    font-weight: var(--vcl-font-weight-bold);
+    color: var(--vcl-color-text);
+  }
+
+  &__actions {
+    display: flex;
+    gap: var(--vcl-space-2);
+  }
+}
+
+.demo-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--vcl-space-8) var(--vcl-space-6);
+}

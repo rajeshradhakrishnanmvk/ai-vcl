@@ -1,0 +1,286 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "cli": {
+    "packageManager": "npm"
+  },
+  "newProjectRoot": "projects",
+  "projects": {
+    "angular-workspace": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:application",
+          "options": {
+            "browser": "src/main.ts",
+            "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "public"
+              }
+            ],
+            "styles": [
+              "src/styles.scss"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular/build:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "angular-workspace:build:production"
+            },
+            "development": {
+              "buildTarget": "angular-workspace:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
+        }
+      }
+    },
+    "vcl-core": {
+      "projectType": "library",
+      "root": "projects/vcl-core",
+      "sourceRoot": "projects/vcl-core/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-core/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-core/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-core/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-components": {
+      "projectType": "library",
+      "root": "projects/vcl-components",
+      "sourceRoot": "projects/vcl-components/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-components/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-components/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-components/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-forms": {
+      "projectType": "library",
+      "root": "projects/vcl-forms",
+      "sourceRoot": "projects/vcl-forms/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-forms/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-forms/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-forms/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-layout": {
+      "projectType": "library",
+      "root": "projects/vcl-layout",
+      "sourceRoot": "projects/vcl-layout/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-layout/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-layout/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-layout/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-data": {
+      "projectType": "library",
+      "root": "projects/vcl-data",
+      "sourceRoot": "projects/vcl-data/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-data/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-data/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-data/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-actions": {
+      "projectType": "library",
+      "root": "projects/vcl-actions",
+      "sourceRoot": "projects/vcl-actions/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-actions/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-actions/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-actions/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-dialogs": {
+      "projectType": "library",
+      "root": "projects/vcl-dialogs",
+      "sourceRoot": "projects/vcl-dialogs/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-dialogs/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-dialogs/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-dialogs/tsconfig.spec.json"
+          }
+        }
+      }
+    },
+    "vcl-theming": {
+      "projectType": "library",
+      "root": "projects/vcl-theming",
+      "sourceRoot": "projects/vcl-theming/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular/build:ng-packagr",
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/vcl-theming/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/vcl-theming/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular/build:unit-test",
+          "options": {
+            "tsConfig": "projects/vcl-theming/tsconfig.spec.json"
+          }
+        }
+      }
+    }
+  }
+}
