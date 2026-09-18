@@ -18,7 +18,7 @@ export interface CreateCustomerRequest {
 }
 
 @Injectable({ providedIn: 'root' })
-export class CustomerDataSource implements DataSource<CustomerDto> {
+export class CustomerDataSource implements DataSource<CustomerDto, CreateCustomerRequest> {
   private readonly http = inject(HttpClient);
   private readonly baseUrl = '/api/v1/customers';
 

@@ -16,6 +16,8 @@ export interface GridColumn {
   key: string;
   label: string;
   sortable?: boolean;
+  /** Optional cell formatter. Receives the raw value and column key; returns the display string. */
+  format?: (value: unknown, key: string) => string;
 }
 
 /**
@@ -80,7 +82,7 @@ export interface GridColumn {
               @for (row of rows(); track getRowKey(row)) {
                 <tr class="vcl-data-grid__row">
                   @for (col of columns(); track col.key) {
-                    <td>{{ getCell(row, col.key) }}</td>
+                    <td>{{ getCell(row, col) }}</td>
                   }
                 </tr>
               }
@@ -147,7 +149,7 @@ export class VclDataGridComponent<T = Record<string, unknown>> implements OnInit
     void this.loadData();
   }
 
-  async loadData(): Promise<void> {
+  protected async loadData(): Promise<void> {
     this.loading.set(true);
     this.error.set(null);
 
@@ -204,12 +206,10 @@ export class VclDataGridComponent<T = Record<string, unknown>> implements OnInit
     return String((row as Record<string, unknown>)['id'] ?? JSON.stringify(row));
   }
 
-  getCell(row: T, key: string): string {
-    const val = (row as Record<string, unknown>)[key];
+  getCell(row: T, col: GridColumn): string {
+    const val = (row as Record<string, unknown>)[col.key];
+    if (col.format) return col.format(val, col.key);
     if (val === null || val === undefined) return '';
-    if (typeof val === 'string' && key === 'createdAt') {
-      return new Date(val).toLocaleDateString();
-    }
     return String(val);
   }
 }

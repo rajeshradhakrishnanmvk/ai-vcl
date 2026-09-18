@@ -124,7 +124,11 @@ export class DemoPageComponent {
     { key: 'name', label: 'Name', sortable: true },
     { key: 'email', label: 'Email', sortable: true },
     { key: 'phone', label: 'Phone' },
-    { key: 'createdAt', label: 'Created' }
+    {
+      key: 'createdAt',
+      label: 'Created',
+      format: (val) => val ? new Date(String(val)).toLocaleDateString() : ''
+    }
   ];
 
   protected readonly customerForm = this.fb.group({

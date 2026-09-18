@@ -17,9 +17,15 @@ export interface PagedResult<T> {
   hasPreviousPage: boolean;
 }
 
-export interface DataSource<T, TQuery = PagedRequest> {
-  load(query: TQuery): Observable<PagedResult<T>>;
-  create?(value: T): Observable<T>;
+/**
+ * Generic data source interface.
+ *
+ * @template T  - Entity type returned by `load` and `update`/`delete`.
+ * @template TCreate - Payload type used by `create`. Defaults to `T` when omitted.
+ */
+export interface DataSource<T, TCreate = T> {
+  load(query: PagedRequest): Observable<PagedResult<T>>;
+  create?(value: TCreate): Observable<T>;
   update?(id: string, value: Partial<T>): Observable<T>;
   delete?(id: string): Observable<void>;
 }
