@@ -5,7 +5,7 @@ import { VclTextInputComponent } from 'vcl-components';
 import { VclPanelComponent } from 'vcl-components';
 import { VclStackComponent } from 'vcl-layout';
 import { VclGridComponent } from 'vcl-layout';
-import { VclDataGridComponent } from 'vcl-data';
+import { VclDataGridComponent, CustomerDataSource, GridColumn } from 'vcl-data';
 import { VclToastContainerComponent, ToastService } from 'vcl-dialogs';
 import { ThemeService } from 'vcl-theming';
 
@@ -97,7 +97,10 @@ import { ThemeService } from 'vcl-theming';
 
           <!-- Data Grid Demo -->
           <vcl-panel title="Customer Data Grid" [elevated]="true">
-            <vcl-data-grid></vcl-data-grid>
+            <vcl-data-grid
+              [dataSource]="customerDataSource"
+              [columns]="customerColumns">
+            </vcl-data-grid>
           </vcl-panel>
 
         </vcl-stack>
@@ -112,9 +115,17 @@ import { ThemeService } from 'vcl-theming';
 export class DemoPageComponent {
   protected readonly toastService = inject(ToastService);
   protected readonly themeService = inject(ThemeService);
+  protected readonly customerDataSource = inject(CustomerDataSource);
   private readonly fb = inject(FormBuilder);
 
   protected readonly submitting = signal(false);
+
+  protected readonly customerColumns: GridColumn[] = [
+    { key: 'name', label: 'Name', sortable: true },
+    { key: 'email', label: 'Email', sortable: true },
+    { key: 'phone', label: 'Phone' },
+    { key: 'createdAt', label: 'Created' }
+  ];
 
   protected readonly customerForm = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(2)]],

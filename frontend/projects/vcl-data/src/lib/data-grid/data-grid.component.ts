@@ -10,7 +10,6 @@ import {
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
-import { CustomerDataSource, CustomerDto } from '../services/customer-data-source';
 import { DataSource, PagedRequest } from '../models/data-source.model';
 
 export interface GridColumn {
@@ -19,6 +18,11 @@ export interface GridColumn {
   sortable?: boolean;
 }
 
+/**
+ * Generic, reusable data grid.
+ * Provide a `DataSource<T>` via the `dataSource` input; the grid handles
+ * paging, sorting and filtering without knowledge of any specific domain model.
+ */
 @Component({
   selector: 'vcl-data-grid',
   standalone: true,
@@ -108,19 +112,15 @@ export interface GridColumn {
   styleUrl: './data-grid.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class VclDataGridComponent<T = CustomerDto> implements OnInit {
-  readonly columns = input<GridColumn[]>([
-    { key: 'name', label: 'Name', sortable: true },
-    { key: 'email', label: 'Email', sortable: true },
-    { key: 'phone', label: 'Phone' },
-    { key: 'createdAt', label: 'Created' }
-  ]);
+export class VclDataGridComponent<T = Record<string, unknown>> implements OnInit {
+  /** Column definitions — key, display label, and optional sortability. */
+  readonly columns = input<GridColumn[]>([]);
+
+  /** Page size for server-side paging. */
   readonly pageSize = input(20);
-  /**
-   * Provide a custom DataSource. Falls back to CustomerDataSource when omitted,
-   * so the component works out-of-the-box in the demo application.
-   */
-  readonly dataSource = input<DataSource<T>>();
+
+  /** Required: the data source providing `load()` (and optionally create/update/delete). */
+  readonly dataSource = input.required<DataSource<T>>();
 
   protected readonly rows = signal<T[]>([]);
   protected readonly loading = signal(false);
@@ -139,15 +139,11 @@ export class VclDataGridComponent<T = CustomerDto> implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
   private destroyed = false;
 
-  constructor(private readonly defaultDataSource: CustomerDataSource) {
-    this.destroyRef.onDestroy(() => { this.destroyed = true; });
-  }
-
-  private get activeDataSource(): DataSource<T> {
-    return (this.dataSource() ?? this.defaultDataSource) as DataSource<T>;
-  }
-
   ngOnInit(): void {
+    this.destroyRef.onDestroy(() => {
+      this.destroyed = true;
+      if (this.filterTimer) clearTimeout(this.filterTimer);
+    });
     void this.loadData();
   }
 
@@ -164,7 +160,7 @@ export class VclDataGridComponent<T = CustomerDto> implements OnInit {
     };
 
     try {
-      const result = await firstValueFrom(this.activeDataSource.load(query));
+      const result = await firstValueFrom(this.dataSource().load(query));
       if (this.destroyed) return;
       this.rows.set(result.items as T[]);
       this.totalCount.set(result.totalCount);

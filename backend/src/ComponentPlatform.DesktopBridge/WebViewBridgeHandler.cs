@@ -11,13 +11,15 @@ public sealed class WebViewBridgeHandler
         "window.maximize", "window.close", "clipboard.read", "clipboard.write"
     };
 
+    private static readonly JsonSerializerOptions JsonOptions =
+        new() { PropertyNameCaseInsensitive = true };
+
     public BridgeResult HandleMessage(string json)
     {
         NativeMessage<JsonElement>? message;
         try
         {
-            message = JsonSerializer.Deserialize<NativeMessage<JsonElement>>(json,
-                new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
+            message = JsonSerializer.Deserialize<NativeMessage<JsonElement>>(json, JsonOptions);
         }
         catch (JsonException ex)
         {
