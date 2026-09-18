@@ -1,0 +1,43 @@
+{
+  "name": "ai-vcl Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  // Forward ports: 4200 = Angular dev server, 5000/5001 = ASP.NET Core API
+  "forwardPorts": [4200, 5000, 5001],
+  "portsAttributes": {
+    "4200": { "label": "Angular Dev Server", "onAutoForward": "notify" },
+    "5000": { "label": "ASP.NET Core API (http)", "onAutoForward": "notify" },
+    "5001": { "label": "ASP.NET Core API (https)", "onAutoForward": "notify" }
+  },
+  // Install npm dependencies for the Angular workspace on container creation
+  "postCreateCommand": "cd frontend && npm install",
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        // .NET / C#
+        "ms-dotnettools.csharp",
+        "ms-dotnettools.csdevkit",
+        // Angular / TypeScript
+        "angular.ng-template",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        // General
+        "EditorConfig.EditorConfig",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "[csharp]": {
+          "editor.defaultFormatter": "ms-dotnettools.csharp"
+        },
+        "dotnet.defaultSolution": "backend/ComponentPlatform.sln",
+        "typescript.preferences.importModuleSpecifier": "relative"
+      }
+    }
+  }
+}
