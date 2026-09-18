@@ -6,9 +6,9 @@ AI-VCL is a full-stack, reusable component library platform inspired by the Delp
 
 | Layer        | Technology                                                |
 |--------------|-----------------------------------------------------------|
-| Frontend     | Angular 20 (standalone), TypeScript strict, SCSS, Signals |
+| Frontend     | Angular 22 (standalone), TypeScript strict, SCSS, Signals |
 | Backend      | ASP.NET Core Web API, C#, EF Core, FluentValidation        |
-| Desktop Host | .NET 8, WPF/WinUI 3, Microsoft WebView2                   |
+| Desktop Host | .NET 10, WPF/WinUI 3, Microsoft WebView2                   |
 | Testing      | Vitest (Angular), xUnit (.NET), Playwright (E2E)          |
 
 ## Repository Structure
@@ -46,7 +46,7 @@ ai-vcl/
 ### Prerequisites
 
 - Node.js 20+
-- .NET 8 SDK
+- .NET 10 SDK
 - Angular CLI (`npm install -g @angular/cli`)
 
 ### Frontend (Angular)
@@ -69,7 +69,7 @@ dotnet run --project src/ComponentPlatform.Api   # API at https://localhost:7001
 dotnet test ComponentPlatform.sln                # Run all unit tests
 ```
 
-Swagger UI is available at `https://localhost:7001/swagger` in development mode.
+Requires **.NET 10 SDK**. Swagger UI is available at `https://localhost:7001/swagger` in development mode.
 
 ### Desktop Host (Windows only)
 

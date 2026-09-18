@@ -2,13 +2,16 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
+  DestroyRef,
+  inject,
   input,
   OnInit,
   signal
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { firstValueFrom } from 'rxjs';
 import { CustomerDataSource, CustomerDto } from '../services/customer-data-source';
-import { PagedRequest } from '../models/data-source.model';
+import { DataSource, PagedRequest } from '../models/data-source.model';
 
 export interface GridColumn {
   key: string;
@@ -70,7 +73,7 @@ export interface GridColumn {
                   </td>
                 </tr>
               }
-              @for (row of rows(); track row.id) {
+              @for (row of rows(); track getRowKey(row)) {
                 <tr class="vcl-data-grid__row">
                   @for (col of columns(); track col.key) {
                     <td>{{ getCell(row, col.key) }}</td>
@@ -105,7 +108,7 @@ export interface GridColumn {
   styleUrl: './data-grid.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class VclDataGridComponent implements OnInit {
+export class VclDataGridComponent<T = CustomerDto> implements OnInit {
   readonly columns = input<GridColumn[]>([
     { key: 'name', label: 'Name', sortable: true },
     { key: 'email', label: 'Email', sortable: true },
@@ -113,8 +116,13 @@ export class VclDataGridComponent implements OnInit {
     { key: 'createdAt', label: 'Created' }
   ]);
   readonly pageSize = input(20);
+  /**
+   * Provide a custom DataSource. Falls back to CustomerDataSource when omitted,
+   * so the component works out-of-the-box in the demo application.
+   */
+  readonly dataSource = input<DataSource<T>>();
 
-  protected readonly rows = signal<CustomerDto[]>([]);
+  protected readonly rows = signal<T[]>([]);
   protected readonly loading = signal(false);
   protected readonly error = signal<string | null>(null);
   protected readonly totalCount = signal(0);
@@ -128,8 +136,16 @@ export class VclDataGridComponent implements OnInit {
   );
 
   private filterTimer: ReturnType<typeof setTimeout> | null = null;
+  private readonly destroyRef = inject(DestroyRef);
+  private destroyed = false;
 
-  constructor(private readonly dataSource: CustomerDataSource) {}
+  constructor(private readonly defaultDataSource: CustomerDataSource) {
+    this.destroyRef.onDestroy(() => { this.destroyed = true; });
+  }
+
+  private get activeDataSource(): DataSource<T> {
+    return (this.dataSource() ?? this.defaultDataSource) as DataSource<T>;
+  }
 
   ngOnInit(): void {
     void this.loadData();
@@ -147,18 +163,18 @@ export class VclDataGridComponent implements OnInit {
       filter: this.filterValue() || undefined
     };
 
-    this.dataSource.load(query).subscribe({
-      next: result => {
-        this.rows.set(result.items);
-        this.totalCount.set(result.totalCount);
-        this.loading.set(false);
-      },
-      error: err => {
-        this.error.set('Failed to load data. Please try again.');
-        this.loading.set(false);
-        console.error('[VclDataGrid] Load error:', err);
-      }
-    });
+    try {
+      const result = await firstValueFrom(this.activeDataSource.load(query));
+      if (this.destroyed) return;
+      this.rows.set(result.items as T[]);
+      this.totalCount.set(result.totalCount);
+    } catch (err) {
+      if (this.destroyed) return;
+      this.error.set('Failed to load data. Please try again.');
+      console.error('[VclDataGrid] Load error:', err);
+    } finally {
+      if (!this.destroyed) this.loading.set(false);
+    }
   }
 
   onFilterChange(value: string): void {
@@ -188,8 +204,12 @@ export class VclDataGridComponent implements OnInit {
     return this.sortDesc() ? 'descending' : 'ascending';
   }
 
-  getCell(row: CustomerDto, key: string): string {
-    const val = (row as unknown as Record<string, unknown>)[key];
+  getRowKey(row: T): string {
+    return String((row as Record<string, unknown>)['id'] ?? JSON.stringify(row));
+  }
+
+  getCell(row: T, key: string): string {
+    const val = (row as Record<string, unknown>)[key];
     if (val === null || val === undefined) return '';
     if (typeof val === 'string' && key === 'createdAt') {
       return new Date(val).toLocaleDateString();

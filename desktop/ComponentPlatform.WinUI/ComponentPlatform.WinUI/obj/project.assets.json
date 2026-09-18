@@ -1,0 +1,287 @@
+{
+  "version": 4,
+  "targets": {
+    "net10.0-windows": {
+      "Microsoft.Web.WebView2/1.0.2739.15": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Web.WebView2.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/WebView2Loader.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "ComponentPlatform.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "compile": {
+          "bin/placeholder/ComponentPlatform.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComponentPlatform.Contracts.dll": {}
+        }
+      },
+      "ComponentPlatform.DesktopBridge/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "ComponentPlatform.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ComponentPlatform.DesktopBridge.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ComponentPlatform.DesktopBridge.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.Web.WebView2/1.0.2739.15": {
+      "sha512": "hZg7vHWBg4RIiK3rhkNqX3hcBqqoVXVrrO2BVrVOiSmEgfLa7lY64G1tWh2VY84MfHIFLCAQNwn3Rwvu+ICHyw==",
+      "type": "package",
+      "path": "microsoft.web.webview2/1.0.2739.15",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "NOTICE.txt",
+        "WebView2.idl",
+        "WebView2.tlb",
+        "build/Common.targets",
+        "build/Microsoft.Web.WebView2.targets",
+        "build/WebView2Rules.Project.xml",
+        "build/native/Microsoft.Web.WebView2.targets",
+        "build/native/arm64/WebView2Loader.dll",
+        "build/native/arm64/WebView2Loader.dll.lib",
+        "build/native/arm64/WebView2LoaderStatic.lib",
+        "build/native/include-winrt/WebView2Interop.h",
+        "build/native/include-winrt/WebView2Interop.idl",
+        "build/native/include-winrt/WebView2Interop.tlb",
+        "build/native/include/WebView2.h",
+        "build/native/include/WebView2EnvironmentOptions.h",
+        "build/native/x64/WebView2Loader.dll",
+        "build/native/x64/WebView2Loader.dll.lib",
+        "build/native/x64/WebView2LoaderStatic.lib",
+        "build/native/x86/WebView2Loader.dll",
+        "build/native/x86/WebView2Loader.dll.lib",
+        "build/native/x86/WebView2LoaderStatic.lib",
+        "build/wv2winrt.targets",
+        "lib/Microsoft.Web.WebView2.Core.winmd",
+        "lib/net462/Microsoft.Web.WebView2.Core.dll",
+        "lib/net462/Microsoft.Web.WebView2.Core.xml",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.dll",
+        "lib/net462/Microsoft.Web.WebView2.WinForms.xml",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.dll",
+        "lib/net462/Microsoft.Web.WebView2.Wpf.xml",
+        "lib_manual/net6.0-windows10.0.17763.0/Microsoft.Web.WebView2.Core.Projection.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Core.xml",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.WinForms.xml",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.dll",
+        "lib_manual/netcoreapp3.0/Microsoft.Web.WebView2.Wpf.xml",
+        "microsoft.web.webview2.1.0.2739.15.nupkg.sha512",
+        "microsoft.web.webview2.nuspec",
+        "runtimes/win-arm64/native/WebView2Loader.dll",
+        "runtimes/win-arm64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x64/native/WebView2Loader.dll",
+        "runtimes/win-x64/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "runtimes/win-x86/native/WebView2Loader.dll",
+        "runtimes/win-x86/native_uap/Microsoft.Web.WebView2.Core.dll",
+        "tools/VisualStudioToolsManifest.xml",
+        "tools/wv2winrt/Antlr3.Runtime.dll",
+        "tools/wv2winrt/Antlr4.StringTemplate.dll",
+        "tools/wv2winrt/System.Buffers.dll",
+        "tools/wv2winrt/System.CommandLine.DragonFruit.dll",
+        "tools/wv2winrt/System.CommandLine.Rendering.dll",
+        "tools/wv2winrt/System.CommandLine.dll",
+        "tools/wv2winrt/System.Memory.dll",
+        "tools/wv2winrt/System.Numerics.Vectors.dll",
+        "tools/wv2winrt/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/wv2winrt/codegen_util.dll",
+        "tools/wv2winrt/concrt140_app.dll",
+        "tools/wv2winrt/cs/System.CommandLine.resources.dll",
+        "tools/wv2winrt/de/System.CommandLine.resources.dll",
+        "tools/wv2winrt/es/System.CommandLine.resources.dll",
+        "tools/wv2winrt/fr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/it/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ja/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ko/System.CommandLine.resources.dll",
+        "tools/wv2winrt/msvcp140_1_app.dll",
+        "tools/wv2winrt/msvcp140_2_app.dll",
+        "tools/wv2winrt/msvcp140_app.dll",
+        "tools/wv2winrt/pl/System.CommandLine.resources.dll",
+        "tools/wv2winrt/pt-BR/System.CommandLine.resources.dll",
+        "tools/wv2winrt/ru/System.CommandLine.resources.dll",
+        "tools/wv2winrt/tr/System.CommandLine.resources.dll",
+        "tools/wv2winrt/type_hierarchy.dll",
+        "tools/wv2winrt/vcamp140_app.dll",
+        "tools/wv2winrt/vccorlib140_app.dll",
+        "tools/wv2winrt/vcomp140_app.dll",
+        "tools/wv2winrt/vcruntime140_app.dll",
+        "tools/wv2winrt/winrt_winmd.dll",
+        "tools/wv2winrt/winrt_winmd.winmd",
+        "tools/wv2winrt/wv2winrt.exe",
+        "tools/wv2winrt/wv2winrt.exe.config",
+        "tools/wv2winrt/wv2winrt.xml",
+        "tools/wv2winrt/zh-Hans/System.CommandLine.resources.dll",
+        "tools/wv2winrt/zh-Hant/System.CommandLine.resources.dll"
+      ]
+    },
+    "ComponentPlatform.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../../../backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj",
+      "msbuildProject": "../../../backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj"
+    },
+    "ComponentPlatform.DesktopBridge/1.0.0": {
+      "type": "project",
+      "path": "../../../backend/src/ComponentPlatform.DesktopBridge/ComponentPlatform.DesktopBridge.csproj",
+      "msbuildProject": "../../../backend/src/ComponentPlatform.DesktopBridge/ComponentPlatform.DesktopBridge.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net10.0-windows": [
+      "ComponentPlatform.DesktopBridge >= 1.0.0",
+      "Microsoft.Web.WebView2 >= 1.0.2739"
+    ]
+  },
+  "packageFolders": {
+    "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/runner/work/ai-vcl/ai-vcl/desktop/ComponentPlatform.WinUI/ComponentPlatform.WinUI/ComponentPlatform.WinUI.csproj",
+      "projectName": "ComponentPlatform.WinUI",
+      "projectPath": "/home/runner/work/ai-vcl/ai-vcl/desktop/ComponentPlatform.WinUI/ComponentPlatform.WinUI/ComponentPlatform.WinUI.csproj",
+      "packagesPath": "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages",
+      "outputPath": "/home/runner/work/ai-vcl/ai-vcl/desktop/ComponentPlatform.WinUI/ComponentPlatform.WinUI/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/runner/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net10.0-windows"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net10.0-windows": {
+          "framework": "net10.0-windows7.0",
+          "targetAlias": "net10.0-windows",
+          "projectReferences": {
+            "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.DesktopBridge/ComponentPlatform.DesktopBridge.csproj": {
+              "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.DesktopBridge/ComponentPlatform.DesktopBridge.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "all"
+      },
+      "SdkAnalysisLevel": "10.0.400"
+    },
+    "frameworks": {
+      "net10.0-windows": {
+        "framework": "net10.0-windows7.0",
+        "targetAlias": "net10.0-windows",
+        "dependencies": {
+          "Microsoft.Web.WebView2": {
+            "target": "Package",
+            "version": "[1.0.2739, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[10.0.11, 10.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.linux-x64",
+            "version": "[10.0.11, 10.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[10.0.11, 10.0.11]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[10.0.11, 10.0.11]"
+          }
+        ],
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json",
+        "packagesToPrune": {
+          "Microsoft.VisualBasic": "(,10.3.32767]",
+          "Microsoft.Win32.Registry.AccessControl": "(,9.0.32767]",
+          "Microsoft.Win32.SystemEvents": "(,9.0.32767]",
+          "System.CodeDom": "(,9.0.32767]",
+          "System.Configuration.ConfigurationManager": "(,9.0.32767]",
+          "System.Diagnostics.EventLog": "(,9.0.32767]",
+          "System.Diagnostics.PerformanceCounter": "(,9.0.32767]",
+          "System.DirectoryServices": "(,9.0.32767]",
+          "System.Drawing.Common": "(,9.0.32767]",
+          "System.IO.Packaging": "(,9.0.32767]",
+          "System.Resources.Extensions": "(,9.0.32767]",
+          "System.Security.Cryptography.Pkcs": "(,9.0.32767]",
+          "System.Security.Cryptography.ProtectedData": "(,9.0.32767]",
+          "System.Security.Cryptography.Xml": "(,9.0.32767]",
+          "System.Security.Permissions": "(,9.0.32767]",
+          "System.Threading.AccessControl": "(,9.0.32767]",
+          "System.Windows.Extensions": "(,9.0.32767]"
+        }
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "ComponentPlatform.WinUI depends on Microsoft.Web.WebView2 (>= 1.0.2739) but Microsoft.Web.WebView2 1.0.2739 was not found. Microsoft.Web.WebView2 1.0.2739.15 was resolved instead.",
+      "libraryId": "Microsoft.Web.WebView2",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    }
+  ]
+}

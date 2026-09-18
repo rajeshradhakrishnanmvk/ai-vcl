@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "eoU8327eN/s=",
+  "dgSpecHash": "DWY3RKYUAeE=",
   "success": true,
   "projectFilePath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages/microsoft.netcore.app.ref/10.0.11/microsoft.netcore.app.ref.10.0.11.nupkg.sha512",
+    "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages/microsoft.windowsdesktop.app.ref/10.0.11/microsoft.windowsdesktop.app.ref.10.0.11.nupkg.sha512",
+    "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/10.0.11/microsoft.aspnetcore.app.ref.10.0.11.nupkg.sha512"
+  ],
   "logs": []
 }
