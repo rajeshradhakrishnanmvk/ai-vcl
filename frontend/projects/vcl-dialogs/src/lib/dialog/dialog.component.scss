@@ -1,0 +1,63 @@
+.vcl-dialog {
+  border: none;
+  border-radius: var(--vcl-radius-lg);
+  box-shadow: var(--vcl-shadow-lg);
+  background: var(--vcl-color-surface);
+  padding: 0;
+  max-width: min(90vw, 600px);
+  width: 100%;
+
+  &::backdrop {
+    background: rgb(0 0 0 / 50%);
+    animation: vcl-backdrop-in var(--vcl-transition-normal);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--vcl-space-4) var(--vcl-space-6);
+    border-bottom: 1px solid var(--vcl-color-border);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: var(--vcl-font-size-lg);
+    font-weight: var(--vcl-font-weight-bold);
+    color: var(--vcl-color-text);
+  }
+
+  &__close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--vcl-color-text-muted);
+    padding: var(--vcl-space-1);
+    line-height: 1;
+    border-radius: var(--vcl-radius-md);
+
+    &:focus-visible {
+      box-shadow: var(--vcl-focus-ring);
+      outline: none;
+    }
+
+    &:hover {
+      color: var(--vcl-color-text);
+    }
+  }
+
+  &__body {
+    padding: var(--vcl-space-6);
+  }
+}
+
+@keyframes vcl-backdrop-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

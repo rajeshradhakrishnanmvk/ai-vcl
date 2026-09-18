@@ -1,0 +1,32 @@
+.vcl-panel {
+  background: var(--vcl-color-surface);
+  border: 1px solid var(--vcl-color-border);
+  border-radius: var(--vcl-radius-lg);
+  overflow: hidden;
+
+  &--elevated {
+    box-shadow: var(--vcl-shadow-md);
+    border: none;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--vcl-space-4) var(--vcl-space-6);
+    border-bottom: 1px solid var(--vcl-color-border);
+    background: var(--vcl-color-surface-alt);
+  }
+
+  &__title {
+    margin: 0;
+    font-size: var(--vcl-font-size-lg);
+    font-weight: var(--vcl-font-weight-bold);
+    color: var(--vcl-color-text);
+    line-height: var(--vcl-line-height-tight);
+  }
+
+  &__body {
+    padding: var(--vcl-space-6);
+  }
+}

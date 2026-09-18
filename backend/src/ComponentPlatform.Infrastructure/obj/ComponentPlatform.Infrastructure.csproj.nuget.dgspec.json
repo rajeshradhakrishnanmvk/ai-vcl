@@ -1,0 +1,256 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Infrastructure/ComponentPlatform.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj",
+        "projectName": "ComponentPlatform.Contracts",
+        "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj",
+        "packagesPath": "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "framework": "net10.0",
+            "targetAlias": "net10.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net10.0": {
+          "framework": "net10.0",
+          "targetAlias": "net10.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/ComponentPlatform.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/ComponentPlatform.Domain.csproj",
+        "projectName": "ComponentPlatform.Domain",
+        "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/ComponentPlatform.Domain.csproj",
+        "packagesPath": "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "framework": "net10.0",
+            "targetAlias": "net10.0",
+            "projectReferences": {
+              "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj": {
+                "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net10.0": {
+          "framework": "net10.0",
+          "targetAlias": "net10.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Infrastructure/ComponentPlatform.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Infrastructure/ComponentPlatform.Infrastructure.csproj",
+        "projectName": "ComponentPlatform.Infrastructure",
+        "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Infrastructure/ComponentPlatform.Infrastructure.csproj",
+        "packagesPath": "/tmp/codeql-scratch-683992f3e97e692f/dbs/csharp/working/packages",
+        "outputPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/runner/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net10.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net10.0": {
+            "framework": "net10.0",
+            "targetAlias": "net10.0",
+            "projectReferences": {
+              "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj": {
+                "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Contracts/ComponentPlatform.Contracts.csproj"
+              },
+              "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/ComponentPlatform.Domain.csproj": {
+                "projectPath": "/home/runner/work/ai-vcl/ai-vcl/backend/src/ComponentPlatform.Domain/ComponentPlatform.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "10.0.400"
+      },
+      "frameworks": {
+        "net10.0": {
+          "framework": "net10.0",
+          "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[10.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[10.0.12, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[10.0.11, 10.0.11]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

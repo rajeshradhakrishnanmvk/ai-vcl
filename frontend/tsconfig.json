@@ -1,0 +1,113 @@
+/* To learn more about Typescript configuration file: https://www.typescriptlang.org/docs/handbook/tsconfig-json.html. */
+/* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve",
+    "paths": {
+      "vcl-actions": [
+        "./dist/vcl-actions",
+        "./projects/vcl-actions/src/public-api.ts"
+      ],
+      "vcl-components": [
+        "./dist/vcl-components",
+        "./projects/vcl-components/src/public-api.ts"
+      ],
+      "vcl-core": [
+        "./dist/vcl-core",
+        "./projects/vcl-core/src/public-api.ts"
+      ],
+      "vcl-data": [
+        "./dist/vcl-data",
+        "./projects/vcl-data/src/public-api.ts"
+      ],
+      "vcl-dialogs": [
+        "./dist/vcl-dialogs",
+        "./projects/vcl-dialogs/src/public-api.ts"
+      ],
+      "vcl-forms": [
+        "./dist/vcl-forms",
+        "./projects/vcl-forms/src/public-api.ts"
+      ],
+      "vcl-layout": [
+        "./dist/vcl-layout",
+        "./projects/vcl-layout/src/public-api.ts"
+      ],
+      "vcl-theming": [
+        "./dist/vcl-theming",
+        "./projects/vcl-theming/src/public-api.ts"
+      ]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-core/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-core/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-components/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-components/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-forms/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-forms/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-layout/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-layout/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-data/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-data/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-actions/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-actions/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-dialogs/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-dialogs/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/vcl-theming/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/vcl-theming/tsconfig.spec.json"
+    }
+  ]
+}

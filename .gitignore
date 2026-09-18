@@ -1,0 +1,31 @@
+# Node / Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+frontend/out-tsc/
+
+# .NET build artifacts
+backend/*/bin/
+backend/*/obj/
+backend/*.db
+backend/*.db-shm
+backend/*.db-wal
+desktop/*/bin/
+desktop/*/obj/
+
+# IDE
+.vscode/
+.idea/
+*.user
+*.suo
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vitest
+frontend/coverage/
